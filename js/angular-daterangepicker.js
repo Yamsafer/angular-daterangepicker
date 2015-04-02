@@ -106,6 +106,7 @@
         };
         _init();
         el.change(function() {
+           $scope.$emit("datarange.changed",_getPicker());
           if ($.trim(el.val()) === '') {
             return $timeout(function() {
               return $scope.$apply(function() {
